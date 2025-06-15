@@ -41,7 +41,7 @@ export function ChatPicker({
           </SelectTrigger>
           <SelectContent side="top">
             <SelectGroup>
-              <SelectLabel>Persona</SelectLabel>
+              <SelectLabel>Templates</SelectLabel>
               <SelectItem value="auto">
                 <div className="flex items-center space-x-2">
                   <Sparkles

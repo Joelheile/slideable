@@ -1,18 +1,21 @@
-FROM node:20-slim
+# You can use most Debian-based base images
+FROM node:21-slim
 
-# Install app dependencies
-WORKDIR /home/user/app
-COPY . /home/user/app
-RUN npm install
+# Install curl
+RUN apt-get update && apt-get install -y curl && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Build the React app for production
-RUN npm run build
+COPY compile_page.sh /compile_page.sh
+RUN chmod +x /compile_page.sh
 
-# Install a simple HTTP server to serve the build
-RUN npm install -g serve
+# Install dependencies and customize sandbox
+WORKDIR /home/user/nextjs-app
 
-# Expose the default port
-EXPOSE 3000
+RUN npx create-next-app@14.2.20 . --ts --tailwind --no-eslint --import-alias "@/*" --use-npm --no-app --no-src-dir
+COPY _app.tsx pages/_app.tsx
 
-# Start the app
-CMD ["serve", "-s", "build", "-l", "3000"]
+RUN npx shadcn@2.1.7 init -d
+RUN npx shadcn@2.1.7 add --all
+RUN npm install posthog-js
+
+# Move the Nextjs app to the home directory and remove the nextjs-app directory
+RUN mv /home/user/nextjs-app/* /home/user/ && rm -rf /home/user/nextjs-app
