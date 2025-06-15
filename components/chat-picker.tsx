@@ -70,7 +70,7 @@ export function ChatPicker({
           </SelectContent>
         </Select>
       </div>
-      <div className="flex flex-col">
+      {/* <div className="flex flex-col">
         <Select
           name="languageModel"
           defaultValue={languageModel.model}
@@ -103,7 +103,7 @@ export function ChatPicker({
             ))}
           </SelectContent>
         </Select>
-      </div>
+      </div> */
     </div>
   )
 }
