@@ -2,9 +2,9 @@
 
 import { ViewType } from '@/components/auth'
 import { AuthDialog } from '@/components/auth-dialog'
-import { Chat } from '@/components/chat'
-import { ChatInput } from '@/components/chat-input'
-import { ChatPicker } from '@/components/chat-picker'
+import { Chat } from '@/components/chat/chat'
+import { ChatInput } from '@/components/chat/chat-input'
+import { ChatPicker } from '@/components/chat/chat-picker'
 import { NavBar } from '@/components/navbar'
 import { Preview } from '@/components/preview'
 import { useAuth } from '@/lib/auth'

@@ -1,0 +1,295 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Slidable - AI-Powered Presentation Platform
+
+## Project Vision & Mission
+
+### **Vision Statement**
+Transform presentation creation from a tedious design process into an intelligent, context-aware experience that produces visually stunning slides with professional-grade diagrams and imagery.
+
+### **Mission**
+Build the first prompt-first presentation platform that combines superior visual design, context-intelligent AI, and native presentation tools to help busy founders create investor-ready presentations in minutes, not hours.
+
+### **Core Problem Statement**
+Current AI presentation tools like Gamma and Tome fail at:
+- **Poor Visual Quality**: Generic templates with weak contrast and typography 【14-0】【14-1】
+- **Context Blindness**: AI doesn't understand narrative flow between slides 【14-6】
+- **Diagram Limitations**: Cannot create professional business diagrams with D3.js 【14-2】
+- **Template Inconsistency**: One-size-fits-all approach that doesn't serve specific use cases 【14-0】
+
+---
+
+## Product Strategy & Positioning
+
+### **Unique Value Propositions**
+1. **Visual Excellence First**: Best-in-class contrast, typography, and diagram quality
+2. **Context-Aware AI**: Understands your complete presentation story and maintains narrative consistency
+3. **Native Presentation Mode**: Built-in slide navigation eliminates need for external tools
+4. **Startup-Focused Templates**: Curated specifically for pitch decks, board meetings, and founder needs
+
+### **Target Market Segmentation**
+
+#### **Primary Market: Indie Hackers & Startup Founders**
+- **Size**: 50,000+ active founders in DACH region
+- **Pain Points**: Limited design skills, time constraints, investor presentation pressure
+- **Budget**: $15-50/month for productivity tools
+- **Use Cases**: Pitch decks, board meetings, team presentations
+
+#### **Secondary Market: Business Professionals**
+- **Size**: 500,000+ professionals needing regular presentations
+- **Pain Points**: Corporate template limitations, design consistency
+- **Budget**: $25-100/month for professional tools
+- **Use Cases**: Client presentations, internal reports, strategy decks
+
+#### **Tertiary Market: Students & Educators**
+- **Size**: 2M+ students in DACH region
+- **Pain Points**: Limited design resources, academic presentation requirements
+- **Budget**: $5-15/month or freemium
+- **Use Cases**: Thesis presentations, class projects, research presentations
+
+---
+
+## Technical Architecture & Innovation
+
+### **Core Technology Stack**
+- **Frontend**: Next.js 14 + TypeScript + Tailwind CSS + Framer Motion
+- **AI Integration**: OpenAI GPT-4 (content) + DALL-E 3 (images) + Custom context engine
+- **Visualization**: D3.js for professional diagrams + Chart.js fallback
+- **Infrastructure**: E2B sandboxes for secure AI processing
+- **Database**: Supabase for user data + presentations
+- **Authentication**: Supabase Auth with social login
+
+### **AI Innovation Framework**
+
+#### **Context-Aware Engine**
+```typescript
+interface PresentationContext {
+  narrative: string;
+  previousSlides: SlideContent[];
+  targetAudience: AudienceType;
+  presentationType: TemplateType;
+  brandGuidelines?: BrandSettings;
+}
+
+class ContextEngine {
+  analyzeNarrative(context: PresentationContext): NarrativeInsights
+  generateSlideContent(context: PresentationContext): SlideContent
+  maintainConsistency(slides: SlideContent[]): ConsistencyReport
+}
+```
+
+#### **Visual Excellence Pipeline**
+- Typography Engine: Automated font pairing and hierarchy
+- Color Intelligence: Brand-aware color palette generation
+- Contrast Optimization: WCAG AAA compliance automation
+- Layout Intelligence: Grid-based responsive design system
+
+#### **Professional Diagram Generation**
+- Business Chart Types: Funnels, growth curves, org charts, process flows
+- D3.js Integration: Interactive, animated, and responsive visualizations
+- Data Intelligence: Realistic data generation based on industry context
+- Export Quality: Vector-based outputs for print and digital
+
+---
+
+## Product Development Roadmap
+
+### **MVP (Months 1-3): Foundation**
+
+#### **Core Features**
+- Prompt-to-Slides Engine
+  - Natural language processing for presentation requirements
+  - Context understanding across slide sequences
+  - Template selection (3 core templates)
+
+#### **Essential Templates**
+- Pitch Deck (12 slides): Problem, solution, market, traction, team, financials
+- Board Meeting (8 slides): KPIs, updates, challenges, decisions
+- Team Meeting (6 slides): Goals, progress, announcements
+
+#### **Basic Slide Types**
+- Title slides with dynamic layouts
+- Content slides (bullet points, text blocks)
+- Simple charts (bar, line, pie) with Chart.js
+- Image + text combinations with AI-generated visuals
+
+#### **Native Presentation Mode**
+- Full-screen slide navigation
+- Keyboard controls and presenter notes
+- Progress indicators and slide counter
+
+#### **Technical MVP Requirements**
+- E2B sandbox integration for AI processing
+- Supabase backend for user management
+- Export functionality (PDF, PNG, shareable links)
+- Basic responsive design
+
+---
+
+### **Phase 2 (Months 4-6): Visual Excellence**
+
+#### **Advanced Features**
+- D3.js Diagram Engine
+  - Interactive business diagrams
+  - Animated chart transitions
+  - Custom data visualizations
+
+#### **Enhanced AI Capabilities**
+- Cross-slide narrative consistency
+- Industry-specific terminology
+- Audience-appropriate complexity adjustment
+
+#### **Professional Templates**
+- Series A/B/C pitch decks with advanced metrics
+- Go-to-market strategy presentations
+- Product launch decks with timeline visualization
+
+#### **Visual Quality Improvements**
+- Advanced typography engine
+- Brand guideline integration
+- Professional color palette generation
+- Layout optimization algorithms
+
+---
+
+### **Phase 3 (Months 7-12): Scale & Expansion**
+
+#### **Advanced Features**
+- Collaboration Tools
+  - Real-time multi-user editing
+  - Comment and feedback system
+  - Version history and branching
+
+#### **Enterprise Features**
+- Custom brand templates
+- Team asset libraries
+- Advanced analytics and tracking
+
+#### **Platform Expansion**
+- Mobile presentation viewer
+- Offline presentation mode
+- Integration APIs (Figma, Slack, etc.)
+
+---
+
+## Business Model & Monetization
+
+### **Pricing Strategy**
+- **Freemium Model**
+  - Free Tier: 3 presentations/month, basic templates, Slidable watermark
+  - Pro ($15/month): Unlimited presentations, all templates, no watermark, PDF export
+  - Team ($45/month): 5 users, collaboration features, brand customization
+  - Enterprise (Custom): Unlimited users, custom templates, API access, dedicated support
+
+### **Revenue Projections**
+- Month 3: $5K MRR (300 users, 10% conversion)
+- Month 6: $25K MRR (2,000 users, 15% conversion)
+- Month 12: $100K MRR (8,000 users, 20% conversion)
+
+---
+
+## Go-to-Market Strategy
+
+### **Phase 1: Product Hunt & Indie Community**
+- Product Hunt launch with founder network support
+- Indie Hacker community engagement
+- YFN network beta testing and feedback
+
+### **Phase 2: Content Marketing & SEO**
+- "How to create investor-ready pitch decks" content series
+- Template galleries and design inspiration
+- Startup presentation best practices blog
+
+### **Phase 3: Partnership & Integration**
+- Accelerator partnerships (Techstars, Y Combinator)
+- VC firm integrations for portfolio companies
+- Startup event sponsorships and demos
+
+---
+
+## Competitive Analysis & Differentiation
+
+### **Direct Competitors**
+- **Gamma**
+  - Strengths: Good content generation, professional aesthetic
+  - Weaknesses: Limited context awareness, generic templates
+  - Our Advantage: Superior visual quality, startup-specific focus
+- **Tome**
+  - Strengths: AI-centric experience, interactive content
+  - Weaknesses: Verbose content, limited export options
+  - Our Advantage: Better narrative flow, native presentation mode
+- **Beautiful.AI**
+  - Strengths: Smart design assistance, template variety
+  - Weaknesses: Limited AI integration, high pricing
+  - Our Advantage: Full AI automation, startup-focused pricing
+
+### **Competitive Advantages**
+- Context Intelligence: Only platform that understands complete presentation narrative
+- Visual Quality: Professional-grade design that rivals manual creation
+- Startup Focus: Templates and features built specifically for founder needs
+- Native Experience: Purpose-built presentation tools, not adapted document editors
+- Speed: Fastest path from idea to investor-ready presentation
+
+---
+
+## Success Metrics & KPIs
+
+### **Product Metrics**
+- User Engagement: Presentations created per user per month
+- Quality Score: User satisfaction ratings for generated presentations
+- Completion Rate: Percentage of started presentations that are finished
+- Export Rate: Percentage of presentations that are exported/shared
+
+### **Business Metrics**
+- Monthly Recurring Revenue (MRR): Target $100K by month 12
+- Customer Acquisition Cost (CAC): Target <$50 for Pro users
+- Lifetime Value (LTV): Target >$500 for Pro users
+- Churn Rate: Target <5% monthly for paid users
+
+### **Growth Milestones**
+- Month 1: 100 beta users, core MVP functionality
+- Month 3: 1,000 registered users, Product Hunt launch
+- Month 6: 5,000 users, $25K MRR, Series A template launch
+- Month 12: 20,000 users, $100K MRR, enterprise features
+
+---
+
+## Risk Assessment & Mitigation
+
+### **Technical Risks**
+- AI Dependency: Mitigate with multiple provider integrations (OpenAI + Anthropic)
+- Performance: E2B sandboxes ensure scalable AI processing
+- Data Security: SOC 2 compliance and GDPR adherence
+
+### **Market Risks**
+- Competition: Focus on unique value props (context + quality + startup focus)
+- Market Saturation: Target underserved startup founder segment
+- Economic Downturn: Freemium model provides recession-resistant growth
+
+### **Execution Risks**
+- Team Scaling: Hire experienced AI/ML engineers early
+- Product-Market Fit: Continuous user feedback and rapid iteration
+- Funding: Bootstrap to profitability or raise pre-emptively
+
+---
+
+## Team & Organizational Structure
+
+### **Core Team Requirements**
+- Technical Lead: AI/ML expertise, full-stack development
+- Design Lead: Visual design, UX/UI, brand development
+- Product Manager: Startup experience, user research, roadmap planning
+- Marketing Lead: Content creation, community building, growth hacking
+
+### **Advisory Board**
+- Industry Expert: Former presentation software executive
+- AI Advisor: Machine learning researcher or practitioner
+- Startup Mentor: Successful founder with fundraising experience
+- Design Advisor: Professional designer with corporate experience
+
+---
+
+This comprehensive outline positions **Slidable** as the definitive AI presentation platform for startup founders, combining superior technology with deep market understanding to create a category-defining product.
