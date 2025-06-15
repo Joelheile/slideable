@@ -1,0 +1,18 @@
+# This is a config for E2B sandbox template.
+# You can use 'template_id' (scwxnhs1apt5uj7na7db) or 'template_name (nextjs-developer) from this config to spawn a sandbox:
+
+# Python SDK
+# from e2b import Sandbox
+# sandbox = Sandbox(template='nextjs-developer')
+
+# JS SDK
+# import { Sandbox } from 'e2b'
+# const sandbox = await Sandbox.create({ template: 'nextjs-developer' })
+
+template_name = "pitchdeck-ai"
+dockerfile = "e2b.Dockerfile"
+start_cmd = "cd /home/user/app && serve -s build -l 3000"
+
+cpu_count = 4
+memory_mb = 4_096
+team_id = "cac4d450-eb97-4fca-8c7f-bccae715fa57"
