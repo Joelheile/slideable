@@ -19,3 +19,6 @@ RUN npm install posthog-js
 
 # Move the Nextjs app to the home directory and remove the nextjs-app directory
 RUN mv /home/user/nextjs-app/* /home/user/ && rm -rf /home/user/nextjs-app
+
+# Create the public/slides directory for slide images and manifest
+RUN mkdir -p /home/user/public/slides
