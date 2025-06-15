@@ -16,11 +16,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
-import {
-  DiscordLogoIcon,
-  GitHubLogoIcon,
-  TwitterLogoIcon,
-} from '@radix-ui/react-icons'
+import { DiscordLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
 import { Session } from '@supabase/supabase-js'
 import { ArrowRight, LogOut, Trash, Undo } from 'lucide-react'
 import Link from 'next/link'
@@ -133,10 +129,6 @@ export function NavBar({
               >
                 <Logo className="mr-2 h-4 w-4 text-muted-foreground" />
                 About E2B
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => onSocialClick('github')}>
-                <GitHubLogoIcon className="mr-2 h-4 w-4 text-muted-foreground" />
-                Star on GitHub
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => onSocialClick('discord')}>
                 <DiscordLogoIcon className="mr-2 h-4 w-4 text-muted-foreground" />
